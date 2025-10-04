@@ -22,8 +22,7 @@ module.exports = {
     'header-max-length': [2, 'always', 100]
   },
   ignores: [
-    (message) => message.startsWith('Initial plan'),
-    (message) => message.startsWith('WIP'),
+    // Only ignore GitHub-generated merge commits
     (message) => message.startsWith('Merge pull request')
   ]
 };
